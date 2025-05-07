@@ -1,9 +1,12 @@
 from flask import Flask, request
 import os
 import requests
-
+from flask import Flask
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return 'Hello from Render!'
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
